@@ -54,7 +54,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'chemical_equipment.wsgi.application'
 
-database_url = 'postgresql://chemical_equipment_parameter_visualizer_user:OYjUrzo9sKarFEuFP7KLdq4E0bhKRxtD@dpg-d4hf48emcj7s73c05e9g-a.oregon-postgres.render.com/chemical_equipment_parameter_visualizer'
+database_url = os.environ.get('DATABASE_URL')
 
 DATABASES = {
     'default': {
