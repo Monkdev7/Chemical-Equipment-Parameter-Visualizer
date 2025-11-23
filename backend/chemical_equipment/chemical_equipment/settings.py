@@ -1,7 +1,6 @@
 import os
 from pathlib import Path
 import dj_database_url 
-from typing import cast
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -32,6 +31,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'chemical_equipment.urls'
@@ -62,8 +62,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 if database_url:
-    DATABASES['default'] = cast(dict, dj_database_url.parse(database_url))
+    DATABASES['default'] = dict(dj_database_url.config(default=database_url, conn_max_age=600))
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -88,12 +89,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CORS Settings
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
