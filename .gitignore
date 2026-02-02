@@ -23,6 +23,11 @@ wheels/
 *.egg
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
 
 # Django
 *.log
@@ -31,6 +36,7 @@ db.sqlite3
 db.sqlite3-journal
 media/
 staticfiles/
+/static/
 
 # React
 node_modules/
@@ -41,6 +47,10 @@ yarn-error.log*
 .pnp.js
 coverage/
 build/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # IDEs
 .vscode/
@@ -48,6 +58,22 @@ build/
 *.swp
 *.swo
 *~
+*.iml
+.DS_Store
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+test_pdf.py
+*.test.js
+*.test.py
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
 .DS_Store
 
 # Environment variables
