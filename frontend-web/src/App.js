@@ -32,10 +32,10 @@ function App() {
     try {
       setLoading(true);
       const response = await axios.get(`${API_URL}/datasets/`);
-      
+
       // Handle both single object and array responses
       let datasetsArray = Array.isArray(response.data) ? response.data : [response.data];
-      
+
       setDatasets(datasetsArray);
 
       // Calculate stats with better error handling

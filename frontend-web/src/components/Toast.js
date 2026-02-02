@@ -3,7 +3,7 @@ import './Toast.css';
 
 function Toast({ message, type }) {
   useEffect(() => {
-    const timer = setTimeout(() => {}, 4000);
+    const timer = setTimeout(() => { }, 4000);
     return () => clearTimeout(timer);
   }, []);
 
