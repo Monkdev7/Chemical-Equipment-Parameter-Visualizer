@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import Toast from './components/Toast';
 import Visualizations from './components/Visualizations';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api';
+const API_URL = process.env.REACT_APP_API_URL || 'https://chemical-equipment-parameter-visualizer-u33b.onrender.com/api';
 
 function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
