@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import axios from 'axios';
 import './FileUpload.css';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api';
+const API_URL = process.env.REACT_APP_API_URL || 'https://chemical-equipment-parameter-visualizer-u33b.onrender.com/api';
 
 function FileUpload({ onUploadSuccess }) {
   const [isDragging, setIsDragging] = useState(false);

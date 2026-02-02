@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import './DatasetList.css';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api';
+const API_URL = process.env.REACT_APP_API_URL || 'https://chemical-equipment-parameter-visualizer-u33b.onrender.com/api';
 
 function DatasetList({ datasets, loading, onDelete, onRefresh }) {
   const [expandedId, setExpandedId] = useState(null);
