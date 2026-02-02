@@ -26,7 +26,7 @@ function App() {
     // Refresh every 30 seconds
     const interval = setInterval(fetchDatasets, 30000);
     return () => clearInterval(interval);
-  }, []);
+  }, [fetchDatasets]);
 
   const fetchDatasets = async () => {
     try {
