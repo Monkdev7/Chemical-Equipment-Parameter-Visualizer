@@ -2,8 +2,6 @@
 
 A comprehensive web and desktop application for uploading, analyzing, and visualizing chemical equipment data. The platform allows users to upload CSV files containing equipment specifications, view detailed analytics, generate PDF reports, and track data history.
 
-**Version:** 2.0 (Enhanced with UI/UX Improvements)
-
 ## 🚀 Features
 
 ### Core Features
