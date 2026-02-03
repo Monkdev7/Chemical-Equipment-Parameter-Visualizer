@@ -326,28 +326,6 @@ Pump C,Pump,10.0,98.5,70.0
 - Environment variables for sensitive data
 - Debug mode disabled in production
 
-## 🚀 Deployment
-
-### Heroku Deployment
-
-1. Create Heroku app: `heroku create your-app-name`
-2. Add PostgreSQL: `heroku addons:create heroku-postgresql:hobby-dev`
-3. Set environment variables:
-   ```bash
-   heroku config:set DEBUG=False
-   heroku config:set ALLOWED_HOSTS=your-app-name.herokuapp.com
-   heroku config:set DJANGO_SECRET_KEY=your-secret-key
-   ```
-4. Deploy: `git push heroku main`
-
-### Docker Deployment
-
-Build and run:
-```bash
-docker build -t chemflow .
-docker run -p 8000:8000 chemflow
-```
-
 ## 📊 Database Schema
 
 ### Dataset Model
